@@ -17,35 +17,61 @@ In our days we need to use an electrical component in safety way that’s why wi
 Like this project could be very useful in applications where one tries to control the movement of motor using wireless channel and to control the speed system which may be used where we need actuation with respect to different intensities of light.
 Motor will be controlled in easy way without any risk.
 # Block diagram
+
+
 LIGHT		LDR		ARDUINO		MOTOR
 When light dependent resistor supplied there is no change on the motor until the light intensity decrease on the LDR.
 Light dependent resistor whose resistance is increased when light falls on it, when light dependent resistor is kept in dark, its resistance is low and that’s why the motor will turn off when the light falls on the light dependent resistor and the motor will turn on when the light goes off .
 # Circuit diagram in fritzing
+![image](https://user-images.githubusercontent.com/104384134/165183947-e9701f40-c6e2-4881-8069-920e509f1d56.png)
+
 # Source code 
 const int ldr=A0;//Set A0(Analog Input) for LDR.
+
 const int motor =3;
+
 void setup() {
+
 Serial.begin(9600);
+
 pinMode(3,OUTPUT);
+
 pinMode(ldr,INPUT);
+
 }
 
+
 void loop() {
+
 int ldrStatus=analogRead(ldr);
+
 if(ldrStatus<=20)
+
 {
+
   digitalWrite(3,HIGH);//Makes the motor glow in Dark.
+  
 Serial.println("DARKNESS OVER HER;TURN ON motor");//Prints the value of LDR to Serial Monitor.
+
 Serial.println(ldrStatus);
+
 }
+
 else
+
   {
+  
     digitalWrite(3,LOW);//Turns the motor OFF in Light.
+    
 
   }
   
+  
     Serial.println("THERE IS SUFFICIENT LIGHT, TURN OFF motor");//Prints the value of LDR to Serial Monitor.
+    
     Serial.println(ldrStatus);
+    
   }
+  
 
 
