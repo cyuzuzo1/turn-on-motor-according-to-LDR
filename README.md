@@ -1,4 +1,4 @@
-# turn-on-motor-according-to-LDR
+# TURN-ON-MOTORr-ACCORDING-TO-LDR
 # abstract
 this project include the ldr which will turn on the motor.
 for implementing this project, we used the arduino uno, light dependent resistor, dc motor (direct current motor) and some other hardware devices.
@@ -17,13 +17,16 @@ In our days we need to use an electrical component in safety way that’s why wi
 Like this project could be very useful in applications where one tries to control the movement of motor using wireless channel and to control the speed system which may be used where we need actuation with respect to different intensities of light.
 Motor will be controlled in easy way without any risk.
 # Block diagram
-
+![image](https://user-images.githubusercontent.com/104384134/165185522-87e51bd0-1a4e-473e-b6bf-8ab78f5e5ef8.png)
 
 LIGHT		LDR		ARDUINO		MOTOR
 When light dependent resistor supplied there is no change on the motor until the light intensity decrease on the LDR.
 Light dependent resistor whose resistance is increased when light falls on it, when light dependent resistor is kept in dark, its resistance is low and that’s why the motor will turn off when the light falls on the light dependent resistor and the motor will turn on when the light goes off .
 # Circuit diagram in fritzing
 ![image](https://user-images.githubusercontent.com/104384134/165183947-e9701f40-c6e2-4881-8069-920e509f1d56.png)
+#   Proteus Circuit
+![picture](https://user-images.githubusercontent.com/104384134/165186158-21e90087-25cd-45c3-8092-516dd0649e6f.jpg)
+
 
 # Source code 
 const int ldr=A0;//Set A0(Analog Input) for LDR.
